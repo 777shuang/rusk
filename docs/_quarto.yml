@@ -6,7 +6,7 @@ book:
   author: 777shuang
   chapters: 
     - index.qmd
-    - コメント.qmd
+    - プログラムの基本的な構造.qmd
     - 識別子.qmd
     - 変数と型.qmd
     - 関数.qmd
