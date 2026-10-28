@@ -101,7 +101,7 @@ let numbers_ = numbers.map((x: f64): x*2)
 
 この例では、`map` に渡した関数によって、配列の各要素を2倍にした配列を生成する。
 
-Ruskでは統一関数呼び出し構文を採用しているので，`map(numbers, (x: float): x*2)`を`numbers.map((x: float): x*2)`と記述できる。
+Ruskでは統一関数呼び出し構文を採用しているので，`map(numbers, (x: f64): x*2)`を`numbers.map((x: f64): x*2)`と記述できる。
 
 ## Rustとの対応
 

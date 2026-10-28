@@ -4,6 +4,8 @@ project:
 book:
   title: "Rusk 言語仕様書（草案）"
   author: 777shuang
+  date: today
+  date-format: "YYYY年M月D日"
   chapters: 
     - index.qmd
     - プログラムの基本的な構造.qmd
