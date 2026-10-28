@@ -82,7 +82,7 @@ const add = (a, b: i32):
 関数は、関数名と引数を用いて呼び出す。
 
 ```rusk
-type Vector = (x, y: float)
+type Vector = (x, y: f64)
 
 # 2次元ベクトルの外積に相当する値を計算する
 const cross = (a, b: Vector):
@@ -96,7 +96,7 @@ const cross = (a, b: Vector):
 ```rusk
 let numbers = [1.5, 3.0, 2.0, 1.5, 3.0, 2.0]
 
-let numbers_ = numbers.map((x: float): x*2)
+let numbers_ = numbers.map((x: f64): x*2)
 ```
 
 この例では、`map` に渡した関数によって、配列の各要素を2倍にした配列を生成する。
