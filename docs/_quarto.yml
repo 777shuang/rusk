@@ -1,2 +1,28 @@
 project:
-  title: "docs"
+  type: book
+
+book:
+  title: "Rusk 言語仕様書（草案）"
+  author: 777shuang
+  chapters: 
+    - index.qmd
+    - コメント.qmd
+    - 識別子.qmd
+    - 変数と型.qmd
+    - 関数.qmd
+    - 条件分岐.qmd
+    - 反復処理.qmd
+    - トレイト.qmd
+    - 今後実装する機能.qmd
+    - 今後検討する事項.qmd
+
+format:
+  pdf:
+    lang: ja
+    pdf-engine: latexmk
+    pdf-engine-opts: 
+      - "-lualatex"
+    documentclass: jlreq
+    classoption: book
+    number-sections: true
+    toc: true
