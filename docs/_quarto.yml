@@ -6,10 +6,11 @@ book:
   author: 777shuang
   date: today
   date-format: "YYYY年M月D日"
-  chapters: 
+  chapters:
     - index.qmd
     - プログラムの基本的な構造.qmd
     - 識別子.qmd
+    - 演算子.qmd
     - 変数と型.qmd
     - 関数.qmd
     - 条件分岐.qmd
@@ -22,7 +23,7 @@ format:
   pdf:
     lang: ja
     pdf-engine: latexmk
-    pdf-engine-opts: 
+    pdf-engine-opts:
       - "-lualatex"
     documentclass: jlreq
     classoption: book
