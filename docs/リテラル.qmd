@@ -231,7 +231,6 @@ Raw 文字列リテラル内には、物理的な改行を直接記述しては�
 ```rusk
 let a: char = 'a'
 let b: char = 'げ'
-let c: char = '😀'
 ```
 
 文字リテラルが表す値は、1 つの Unicode スカラー値とする。
