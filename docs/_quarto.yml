@@ -10,6 +10,7 @@ book:
     - index.qmd
     - プログラムの基本的な構造.qmd
     - 識別子.qmd
+    - リテラル.qmd
     - 演算子.qmd
     - 変数と型.qmd
     - 関数.qmd
