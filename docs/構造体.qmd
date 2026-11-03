@@ -1,1 +1,46 @@
 # 構造体 {#sec-struct}
+
+## 基本的な機能
+
+構造体を定義する基本的な構文は @lst-struct-only-member に示す通りである。
+
+```{#lst-struct-only-member .rusk lst-cap="構造体の基本的な使用法の例"}
+type Example = struct:
+  var name: string
+  var age: u8
+
+let example = Example(name: "田所浩二", age: 24)
+```
+
+構造体は型であり，自分で定義することができる。
+その型の変数を，その型の値(またはインスタンス)と呼ぶ。
+
+## メンバ変数
+
+構造体は`const`，`let`，`var`変数を持つことができる。
+
+| **メンバ変数`\`構造体の値** | 値が`const`      | 値が`let`        | 値が`var`        |
+| :-------------------------- | ---------------- | ---------------- | ---------------- |
+| `const`のメンバ変数         | コンパイル時定数 | コンパイル時定数 | コンパイル時定数 |
+| `let`のメンバ変数           | コンパイル時定数 | 値の作成時に確定 | 値の作成時に確定 |
+| `var`のメンバ変数           | コンパイル時定数 | 値の作成時に確定 | 再代入可能       |
+
+: 構造体の値が`const`，`let`，`var`であった場合のメンバ変数の扱われ方
+
+### メンバ関数
+
+Ruskにおいて，関数は意味上関数値として扱われるため，**本来は構造体がメンバ関数を持つという表現は不適切である**。
+しかし，他の言語との対応を考えて，便宜上「関数値が代入された`const`のメンバ」を「メンバ関数」と呼ぶことにする。
+
+メンバ関数内で同じ構造体のメンバを使用する場合は， @lst-struct-member-function のように，第一引数を定義する必要がある。第一引数の型はその構造体であると推論される。
+
+```{#lst-struct-member-function .rusk lst-cap="「メンバ関数」を含む例"}
+type Example = struct:
+  var name: string
+  var age: u8
+  const show = (self): print(f"{self.age}の{self.name}です。")
+  const birthday = (var self): self.age += 1
+
+let example = Example(name: "田所浩二", age: 24)
+example.show # 出力: 24歳の田所浩二です。
+```
