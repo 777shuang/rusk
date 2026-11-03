@@ -12,7 +12,8 @@ book:
     - 識別子.qmd
     - リテラル.qmd
     - 演算子.qmd
-    - 変数と型.qmd
+    - 変数.qmd
+    - 型.qmd
     - 関数.qmd
     - 構造体.qmd
     - 条件分岐.qmd
