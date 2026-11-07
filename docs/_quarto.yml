@@ -20,6 +20,7 @@ book:
     - 反復処理.qmd
     - 今後実装する機能.qmd
     - 今後検討する事項.qmd
+    - コンパイラの設計.qmd
 
 format:
   pdf:
