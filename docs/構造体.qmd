@@ -38,7 +38,7 @@ Ruskにおいて，関数は意味上関数値として扱われるため，**�
 type Example = struct:
   var name: str
   var age: u8
-  const show = (self): print(f"{self.age}の{self.name}です。")
+  const show = (self): print(f"{self.age}歳の{self.name}です。")
   const birthday = (var self): self.age += 1
 
 let example = Example(name: "田所浩二", age: 24)
