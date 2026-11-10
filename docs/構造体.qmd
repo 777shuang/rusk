@@ -6,7 +6,7 @@
 
 ```{#lst-struct-only-member .rusk lst-cap="構造体の基本的な使用法の例"}
 type Example = struct:
-  var name: string
+  var name: str
   var age: u8
 
 let example = Example(name: "田所浩二", age: 24)
@@ -36,7 +36,7 @@ Ruskにおいて，関数は意味上関数値として扱われるため，**�
 
 ```{#lst-struct-member-function .rusk lst-cap="「メンバ関数」を含む例"}
 type Example = struct:
-  var name: string
+  var name: str
   var age: u8
   const show = (self): print(f"{self.age}の{self.name}です。")
   const birthday = (var self): self.age += 1
